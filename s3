@@ -79,9 +79,9 @@ class AWSCredentials(object):
         Note: This method should be explicitly called after constructing new
             object, as in 'explicit is better than implicit'.
         """
-        env_access_key = os.environ.get("APT_S3_ACCESS_KEY")
-        env_secret_key = os.environ.get("APT_S3_SECRET_KEY")
-        env_token = os.environ.get("APT_S3_TOKEN", "")
+        env_access_key = os.environ.get("AWS_ACCESS_KEY_ID")
+        env_secret_key = os.environ.get("AWS_SECRET_ACCESS_KEY")
+        env_token = os.environ.get("AWS_TOKEN", "")
 
         if env_access_key and env_secret_key:
             self.access_key = env_access_key
